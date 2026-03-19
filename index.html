@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer" />
 
@@ -40,12 +41,9 @@
         <!-- HERO SECTION -->
         <section class="hero-section">
             <div class="hero-content">
-                <div class="hero-image">
-                    <img src="img/rmv.png" alt="Personal Illustration" />
-                </div>
                 <div class="hero-text">
                     <h2>Hi, I'm Jamie Loh</h2>
-                    <p>A curious and driven innovator with a passion for technology, creativity, and <b>innovation</b>. With experience in full stack web development and data analysis, I'm currently deepening my knowledge in <b>machine learning, large language models, and AI</b>. I thrive on turning ideas into reality, and I approach every project with an <b>entrepreneurial mindset</b> and a commitment to continuous learning. I'm actively <b>seeking jobs, freelance opportunities, and collaborative projects</b> where I can contribute, grow, and help create something meaningful.</p>
+                    <p>A curious and driven web developer with a passion for technology, creativity, and innovation. With experience in <b>full stack web development</b>, I thrive on turning ideas into reality, and I approach every project with an <b>entrepreneurial mindset</b> and a commitment to continuous learning. I'm actively <b>seeking jobs, freelance opportunities, and collaborative projects</b> where I can contribute, grow, and help create something meaningful.</p>
                     <div class="hero-links">
                         <a href="#skills"><i class="fa-solid fa-code"></i><span>Skills</span></a>
                         <a href="#project"><i class="fa-solid fa-pen"></i><span>Project</span></a>
@@ -81,11 +79,6 @@
                 <div class="project-card">
                     <div class="media-container">
                     <img src="img/dailydigestphoto.jpg" alt="Daily Digest" />
-                    <video src="img/dailydigestvideo.mp4"
-                    autoplay
-                    loop
-                    muted
-                    playsinline></video>
                     </div>
                     <div class="project-info">
                         <h3>Daily Digest</h3>
@@ -97,11 +90,6 @@
                 <div class="project-card">
                     <div class="media-container">
                         <img src="img/careercatalystphoto.jpg" alt="Daily Digest" />
-                        <video src="img/careercatalystvideo.mp4"
-                        autoplay
-                        loop
-                        muted
-                        playsinline></video>
                         </div>
                     <div class="project-info">
                         <h3>Career Catalyst</h3>
@@ -110,21 +98,30 @@
                         </p>
                     </div>
                 </div>
-                <!-- <div class="project-card">
+                <div class="project-card">
                     <div class="media-container">
-                        <img src="img/dailydigestphoto.jpg" alt="Daily Digest" />
-                        <video src="img/dailydigestvideo.mp4"
-                        autoplay
-                        loop
-                        muted
-                        playsinline></video>
+                        <img src="img/careercatalystphoto.jpg" alt="Daily Digest" />
                         </div>
                     <div class="project-info">
-                        <h3>Teacher's Grader</h3>
-                        <p>An Assistant Grader for Teachers</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui reiciendis nulla nostrum quae at ut, quos vitae! Aperiam a, cupiditate deleniti qui itaque dignissimos, accusantium distinctio quod autem error minima!</p>
+                        <h3>Meal Ease</h3>
+                        <p>Career Preparation Plan In One Click</p>
+                        <p>Get from "I have these skills" to "I'm ready for this job" in 3 simple steps. Career Catalyst is an AI-powered career development tool that transforms your skills into a winning job strategy in minutes. Simply enter your skills (like "React, Node.js, AWS") and instantly get personalized job recommendations with detailed role descriptions and skill gap analysis. The app then generates custom study plans with week-by-week learning roadmaps tailored to your experience level and available time, complete with interactive to-do lists you can check off as you progress. 
+                        </p>
                     </div>
-                </div> -->
+                </div>
+                <div class="project-card">
+                    <div class="media-container">
+                        <img src="img/careercatalystphoto.jpg" alt="Daily Digest" />
+                        </div>
+                    <div class="project-info">
+                        <h3>Badger Swap</h3>
+                        <p>Career Preparation Plan In One Click</p>
+                        <p>Get from "I have these skills" to "I'm ready for this job" in 3 simple steps. Career Catalyst is an AI-powered career development tool that transforms your skills into a winning job strategy in minutes. Simply enter your skills (like "React, Node.js, AWS") and instantly get personalized job recommendations with detailed role descriptions and skill gap analysis. The app then generates custom study plans with week-by-week learning roadmaps tailored to your experience level and available time, complete with interactive to-do lists you can check off as you progress. 
+                        </p>
+                    </div>
+                </div>
+                
+                
                 
                 <!-- Add more project cards as needed -->
             </div>
@@ -138,9 +135,9 @@
                     Drop me a message !!
                 </div> -->
                 <form action="/contact" method="POST" class="contact-form" id="contactForm">
-                    <label for="name">Your Name</label>
+                    <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
-                    <label for="email">Your Email</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>

@@ -6,8 +6,9 @@
   --retro-accent: #fbbf24;
   --text-color: var(--retro-blue);
   --background-color: var(--retro-cream);
-  --header-font: 'Fredoka One', 'Poppins', sans-serif;
-  --body-font: 'Poppins', sans-serif;
+  --header-font: 'Lora', serif;
+  /* --body-font: 'Poppins', sans-serif; */
+  --body-font: 'Lora', serif, font-weight: 400;
 }
 
 * {
@@ -69,7 +70,7 @@ a:hover {
 .navbar-right a {
   color: #fff;
   margin-left: 24px;
-  font-weight: 500;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   font-size: 1rem;
@@ -95,11 +96,11 @@ a:hover {
 
 /* HERO SECTION */
 .hero-section {
-  background: #fff;
-  border-radius: 32px;
-  margin: 0 0 48px 0;
+  /* background: #fff;
+  border-radius: 32px; */
+  margin: 40px 40px 48px;
   padding: 48px 32px;
-  box-shadow: 0 4px 24px 0 rgba(26,35,126,0.07);
+  /* box-shadow: 0 4px 24px 0 rgba(26,35,126,0.07); */
 }
 .hero-content {
   display: flex;
@@ -114,10 +115,11 @@ a:hover {
   font-family: var(--header-font);
   font-size: 2.8rem;
   color: var(--retro-orange);
+  text-align: center;
   margin-bottom: 24px;
 }
 .hero-text p {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   margin-bottom: 24px;
   color: var(--retro-dark);
 }
@@ -131,7 +133,7 @@ a:hover {
   color: #fff;
   border-radius: 20px;
   padding: 8px 20px;
-  font-weight: 600;
+  font-weight:700;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -161,8 +163,8 @@ a:hover {
 
 /* SKILLS SECTION */
 .skills-section {
-  margin: 0 0 48px 0;
-  padding: 32px 0;
+  margin: 40px 40px 48px;
+  padding: 48px 32px;
 }
 .skills-section h2 {
   font-family: var(--header-font);
@@ -259,7 +261,7 @@ a:hover {
   transition: opacity 0.3s ease;
 }
 
-.media-container video {
+/* .media-container video {
   position: absolute;
   top: 0;
   left: 0;
@@ -268,7 +270,7 @@ a:hover {
   object-fit: cover;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
+} */
 .project-info {
   padding: 18px 20px 20px 20px;
 }
@@ -283,63 +285,18 @@ a:hover {
   font-size: 1rem;
   margin-bottom: 6px;
 }
-.project-card:hover {
+/* .project-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 32px 0 rgba(255,111,0,0.13);
-}
+} */
 
-.project-card:hover .media-container img {
-  opacity: 0; /* image fades out on hover */
-}
 
-.project-card:hover .media-container video {
-  opacity: 1; /* video fades in on hover */
-}
-
-/* CTA SECTION */
-.cta-section {
-  background: var(--retro-orange);
-  border-radius: 32px;
-  margin: 0 0 48px 0;
-  padding: 48px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 24px 0 rgba(255,111,0,0.08);
-}
-.cta-content {
-  text-align: center;
-}
-.cta-content h2 {
-  font-family: var(--header-font);
-  color: var(--retro-blue);
-  font-size: 2.4rem;
-  margin-bottom: 30px;
-}
-.cta-button {
-  background: var(--retro-blue);
-  color: #fff;
-  border: none;
-  border-radius: 24px;
-  padding: 16px 40px;
-  font-size: 1.2rem;
-  font-family: var(--header-font);
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 12px 0 rgba(26,35,126,0.07);
-  display: inline-block;
-}
-.cta-button:hover {
-  background: #fff;
-  color: var(--retro-blue);
-  border: 2px solid var(--retro-blue);
-}
 
 /* CONTACT SECTION */
 .contact-section {
   background: #fff;
   border-radius: 32px;
+  margin: 40px 40px 48px;
   padding: 48px 32px;
   box-shadow: 0 4px 24px 0 rgba(26,35,126,0.07);
   margin-bottom: 48px;
@@ -361,7 +318,7 @@ a:hover {
 .contact-text {
   flex: 1;
   color: var(--retro-dark);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin-bottom: 24px;
   min-width: 220px;
 }
@@ -373,7 +330,8 @@ a:hover {
   min-width: 260px;
 }
 .contact-form label {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.2rem;
   color: var(--retro-blue);
 }
 .contact-form input,

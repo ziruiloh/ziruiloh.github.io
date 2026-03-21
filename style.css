@@ -245,6 +245,11 @@ a:hover {
   flex-direction: column;
   transition: transform 0.15s, box-shadow 0.15s;
 }
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 32px 0 rgba(26,35,126,0.15);
+}
+
 .media-container{
   width: 100%;
   aspect-ratio: 16/9;
@@ -274,11 +279,28 @@ a:hover {
 .project-info {
   padding: 18px 20px 20px 20px;
 }
-.project-info h3 {
+.project-header {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+.project-header h3 {
   font-family: var(--header-font);
   color: var(--retro-orange);
   margin-bottom: 6px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+}
+.project-header span {
+  display: inline-block;
+  background: rgba(0, 123, 255, 0.2);
+  color: var(--retro-blue);;
+  border-radius: 20px;
+  /* border: 2px solid; */
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-bottom: 12px;
 }
 .project-info p {
   color: var(--retro-dark);

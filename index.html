@@ -16,7 +16,9 @@
     <title>Jamie Loh's World</title>
 </head>
 <body>
-    
+    <div id="smooth-wrapper">
+    <div id="smooth-content">
+
     <!-- NAVBAR -->
      <nav class="navbar">
         <div class="navbar-left">
@@ -76,7 +78,8 @@
         <!-- PROJECT SECTION -->
         <section id="project" class="project-section">
             <h2>Passion in Action</h2>
-            <div class="projects-grid">
+            <div class="horiz-gallery-wrapper">
+            <div class="horiz-gallery-strip projects-grid">
                 <a href="https://cs571-f25.github.io/p129/">
                 <div class="project-card">
                     <div class="media-container">
@@ -152,6 +155,7 @@
                 
                 <!-- Add more project cards as needed -->
             </div>
+            </div>
         </section>
 
         <!-- CONTACT SECTION -->
@@ -176,7 +180,65 @@
 
         
      </main>
-    
+
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
+    <script>
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    const smoother = ScrollSmoother.create({
+      smooth: 2,
+      effects: true,
+      normalizeScroll: true
+    });
+
+    if (document.getElementById("project")) {
+      const horizontalSections = gsap.utils.toArray(".horiz-gallery-wrapper");
+
+      horizontalSections.forEach(function (sec) {
+        const pinWrap = sec.querySelector(".horiz-gallery-strip");
+
+        let pinWrapWidth;
+        let horizontalScrollLength;
+
+        function refresh() {
+          pinWrapWidth = pinWrap.scrollWidth;
+          horizontalScrollLength = pinWrapWidth - window.innerWidth;
+        }
+
+        refresh();
+
+        gsap.to(pinWrap, {
+          scrollTrigger: {
+            scrub: true,
+            trigger: sec,
+            pin: sec,
+            start: "center center",
+            end: () => `+=${pinWrapWidth}`,
+            invalidateOnRefresh: true
+          },
+          x: () => -horizontalScrollLength,
+          ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refreshInit", refresh);
+      });
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      const href = anchor.getAttribute("href");
+      if (!href || href === "#") return;
+
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        smoother.scrollTo(href, true, "center center");
+      });
+    });
+    </script>
     <script>
     // Responsive AJAX contact form
     const form = document.getElementById('contactForm');
